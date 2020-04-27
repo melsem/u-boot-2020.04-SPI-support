@@ -3,6 +3,23 @@
 # (C) Copyright 2000 - 2013
 # Wolfgang Denk, DENX Software Engineering, wd@denx.de.
 
+=================================================================
+** sudo apt install build-essential git unzip ncurses-dev libz-dev libssl-dev python python3-dev python3.5 libelf-dev subversion gettext gawk wget curl rsync perl**
+```
+make distclean
+make -j1 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- orangepi_zero_defconfig
+make -j1 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
+```
+u-boot-sunxi-with-spl.bin - add spi support
+
+Download the files to /tmp from the archive-uboot: (https://github.com/melsem/u-boot-2020.04-SPI-support/raw/master/uboot.zip)
+ (in it uboot, dtb and orangepi-R1 openwrt-19.07.2 firmware) and run the commands:
+cd /tmp
+mtd -e uboot write uboot.bin uboot
+mtd -e dtb write dtb.bin dtb
+mtd -e firmware -r write firmware-R1.bin firmware
+=================================================================
+
 Summary:
 ========
 

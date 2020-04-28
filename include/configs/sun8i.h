@@ -13,12 +13,12 @@
  */
 
 #define CONFIG_BOOTCOMMAND	"sf probe 0; " \
-				"sf read 0x43000000 0x90000 0x10000; " \
-				"sf read 0x42000000 0xa0000 0x393ec5; " \
+				"sf read 0x43000000 0x80000 0x10000; " \
+				"sf read 0x42000000 0x90000 0x393ec5; " \
 				"bootm 0x42000000 - 0x43000000 "
 
 #define CONFIG_BOOTARGS	"console=ttyS0,115200 earlyprintk rootfstype=squashfs " \
-				"mtdparts=spi0.0:512k(uboot),64k(script),64k(dtb),-(firmware) "
+				"mtdparts=spi0.0:512k(uboot),64k(dtb),-(firmware) "
 
 /*
  * Include common sunxi configuration where most the settings are

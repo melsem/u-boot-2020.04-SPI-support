@@ -45,16 +45,16 @@ mtd -e firmware write openwrt-sunxi-cortexa7-sun8i-h2-plus-orangepi-r1-squashfs-
 * Remove the MMC flash drive and turn on the power.
 * And the orangepi will boot from the SPI flash drive ..
 
-7. Edit basic boot configuration:
-===============
+7. Edit basic boot configuration: 
 http://192.168.10.1/boot
 ```
 on/off wifi, audio, i2c, usb2-3, irc, gpio-keys-user, rotary encoder.
-
-Set checkmarks, click save.
-And then click Apply. Orange Pi reboots.
-And then, as always, tune in to Luci. 192.168.10.1
 ```
+8. Set checkmarks, click save.
+And then click Apply. Orange Pi reboots.
+
+And then, as always, tune in to Luci. 192.168.10.1
+
 =================================================================
 
 Summary:

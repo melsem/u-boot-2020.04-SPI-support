@@ -17,14 +17,29 @@ make -j1 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
 ```
 u-boot-sunxi-with-spl.bin - add spi support
 
-Download the files to /tmp from the archive-uboot: (https://github.com/melsem/u-boot-2020.04-SPI-support/raw/master/uboot.zip)
- (in it uboot, dtb and orangepi-R1 openwrt-19.07.2 firmware) and run the commands:
+Example for opi-R1.
+==================
+Download the bootloader file to /tmp: (https://github.com/melsem/openwrt-oranger1-spi/raw/master/uboot_opi-zero_opi-r1.bin)
+Download the dtb file to /tmp:  (https://github.com/melsem/openwrt-oranger1-spi/raw/master/sun8i-h2-plus-orangepi-r1.dtb)
+Download the firmware file to /tmp: (https://github.com/melsem/openwrt-oranger1-spi/raw/master/openwrt-sunxi-cortexa7-xunlong_orangepi-r1-squashfs-sysupgrade.bin)
+and run the commands:
 ```
 cd /tmp
-mtd -e uboot write uboot.bin uboot
-mtd -e dtb write dtb.bin dtb
-mtd -e firmware -r write firmware-R1.bin firmware
+mtd -e uboot write uboot_opi-zero_opi-r1.bin uboot
+mtd -e dtb write sun8i-h2-plus-orangepi-r1.dtb dtb
+mtd -e firmware -r write openwrt-sunxi-cortexa7-xunlong_orangepi-r1-squashfs-sysupgrade.bin firmware
 ```
+Initial setting:
+===============
+http://192.168.10.1/boot
+on/off wifi, audio
+on/off i2c
+on/off, usb2-3, irc, gpio-keys-user, rotary encoder.
+
+Set checkmarks, click save.
+And then click Apply. Orange Pi reboots.
+And then, as always, tune in to Luci. 192.168.10.1
+
 =================================================================
 
 Summary:

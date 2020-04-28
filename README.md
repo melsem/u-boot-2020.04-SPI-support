@@ -31,7 +31,8 @@ mtd -e firmware -r write openwrt-sunxi-cortexa7-xunlong_orangepi-r1-squashfs-sys
 ```
 Initial setting:
 ===============
-http://192.168.10.1/boot
+```
+192.168.10.1/boot
 on/off wifi, audio
 on/off i2c
 on/off, usb2-3, irc, gpio-keys-user, rotary encoder.
@@ -39,7 +40,7 @@ on/off, usb2-3, irc, gpio-keys-user, rotary encoder.
 Set checkmarks, click save.
 And then click Apply. Orange Pi reboots.
 And then, as always, tune in to Luci. 192.168.10.1
-
+```
 =================================================================
 
 Summary:

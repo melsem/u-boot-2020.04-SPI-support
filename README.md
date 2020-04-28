@@ -31,8 +31,8 @@ mtd -e firmware -r write openwrt-sunxi-cortexa7-xunlong_orangepi-r1-squashfs-sys
 ```
 Initial setting:
 ===============
-```
 192.168.10.1/boot
+```
 on/off wifi, audio
 on/off i2c
 on/off, usb2-3, irc, gpio-keys-user, rotary encoder.

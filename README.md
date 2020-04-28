@@ -31,10 +31,10 @@ And rename it to dtb.
 5. Insert this MMC flash drive into orangepi and apply power.
 
 6. And on orangepi do it:
-Download the bootloader file to /tmp: (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/uboot_opi-zero_opi-r1.bin)
-Download the dtb file to /tmp:  (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/sun8i-h2-plus-orangepi-r1.dtb)
-Download the firmware file to /tmp: (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/openwrt-sunxi-cortexa7-sun8i-h2-plus-orangepi-r1-squashfs-sysupgrade.bin)
-and run the commands:
+ * Download the bootloader file to /tmp: (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/uboot_opi-zero_opi-r1.bin)
+ * Download the dtb file to /tmp:  (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/sun8i-h2-plus-orangepi-r1.dtb)
+ * Download the firmware file to /tmp: (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/openwrt-sunxi-cortexa7-sun8i-h2-plus-orangepi-r1-squashfs-sysupgrade.bin)
+ * and run the commands:
 ```
 cd /tmp
 mtd -e uboot write uboot_opi-zero_opi-r1.bin uboot

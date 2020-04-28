@@ -27,7 +27,7 @@ and run the commands:
 cd /tmp
 mtd -e uboot write uboot_opi-zero_opi-r1.bin uboot
 mtd -e dtb write sun8i-h2-plus-orangepi-r1.dtb dtb
-mtd -e firmware -r write openwrt-sunxi-cortexa7-xunlong_orangepi-r1-squashfs-sysupgrade.bin firmware
+mtd -e firmware -r write openwrt-sunxi-cortexa7-sun8i-h2-plus-orangepi-r1-squashfs-sysupgrade.bin firmware
 ```
 Initial setting:
 ===============

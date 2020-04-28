@@ -185,19 +185,14 @@
 			};
 
 			partition@80000 {
-				label = "script";
+				label = "dtb";
 				reg = <0x80000 0x10000>;
 			};
 
 			partition@90000 {
-				label = "dtb";
-				reg = <0x90000 0x10000>;
-			};
-
-			partition@a0000 {
 				compatible = "firmware";
 				label = "firmware";
-				reg = <0xa0000 0xf60000>;
+				reg = <0x90000 0xf70000>;
 			};
 		};
 	};

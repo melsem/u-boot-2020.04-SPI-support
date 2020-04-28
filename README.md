@@ -17,6 +17,8 @@ make -j1 ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
 ```
 u-boot-sunxi-with-spl.bin - add spi support
 
+The develope "tr4bl3" (http://4pda.ru/forum/index.php?showuser=1177645).
+-------------------
 Example write in spi-flash for opi-R1.
 ==================
 1. Download the usual firmware image for MMС: https://downloads.openwrt.org/releases/19.07.2/targets/sunxi/cortexa7/openwrt-19.07.2-sunxi-cortexa7-sun8i-h2-plus-orangepi-r1-ext4-sdcard.img.gz

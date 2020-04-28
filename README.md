@@ -19,6 +19,18 @@ u-boot-sunxi-with-spl.bin - add spi support
 
 Example for opi-R1.
 ==================
+1. Download the usual firmware image for MMС: https://downloads.openwrt.org/releases/19.07.2/targets/sunxi/cortexa7/openwrt-19.07.2-sunxi-cortexa7-sun8i-h2-plus-orangepi-r1-ext4-sdcard.img.gz
+
+2. Record it on MMС.
+
+3. On the MMC flash drive, in the recorded firmware image, in the /boot folder, delete the dtb file.
+
+4. Download the dtb file to /boot folder:  (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/sun8i-h2-plus-orangepi-r1.dtb)
+And rename it to dtb.
+
+5. Insert this MMC flash drive into orangepi and apply power.
+
+6. And on orangepi do it:
 Download the bootloader file to /tmp: (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/uboot_opi-zero_opi-r1.bin)
 Download the dtb file to /tmp:  (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/sun8i-h2-plus-orangepi-r1.dtb)
 Download the firmware file to /tmp: (https://github.com/melsem/openwrt-19.07.2-spi/raw/master/openwrt-sunxi-cortexa7-sun8i-h2-plus-orangepi-r1-squashfs-sysupgrade.bin)
@@ -27,8 +39,12 @@ and run the commands:
 cd /tmp
 mtd -e uboot write uboot_opi-zero_opi-r1.bin uboot
 mtd -e dtb write sun8i-h2-plus-orangepi-r1.dtb dtb
-mtd -e firmware -r write openwrt-sunxi-cortexa7-sun8i-h2-plus-orangepi-r1-squashfs-sysupgrade.bin firmware
+mtd -e firmware write openwrt-sunxi-cortexa7-sun8i-h2-plus-orangepi-r1-squashfs-sysupgrade.bin firmware
 ```
+* Wait for each command to complete and turn off the power.
+* Remove the MMC flash drive and turn on the power.
+* And the orangepi will boot from the SPI flash drive ..
+
 Initial setting:
 ===============
 192.168.10.1/boot
